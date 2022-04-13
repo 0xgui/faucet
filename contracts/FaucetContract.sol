@@ -4,20 +4,21 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 contract Faucet {
+    uint public numOfFunders;
+    mapping (uint => address) private funders;
 
     receive() external payable {}
 
-    function addFunds() payable external {}
+    function addFunds() payable external {
+        uint index = numOfFunders++;
+    }
 
-    function justTesting() external pure returns(uint) {
-        return 666;
+    function getAllFunders() external view returns(address[] memory){
+        return funders;
     }
     
-    // pure, view - read-only call (no gas fee)
-    // view - it indicates that the function will not alter the storage state
-    // pure - more stricted, indicates that it won't even read the storage state 
-
-    // Transactions (can generate state changes) and require gas fees
-
-    // to talk to the node on the network we will make JSON-RPC http calls
-} 
+    function getFundersAtIndex(uint8 index) external view returns(address) {
+        address[] memory _funders = getAllFunders();
+        return _funders[index];
+    }
+}
