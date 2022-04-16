@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Faucet 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Faucet is a simple project to test and understand more about smart contracts in the Ethereum Network.
 
-## Available Scripts
+![faucet](/faucet.jpg "Faucet") 
 
-In the project directory, you can run:
+## Run Faucet
 
-### `npm start`
+First make sure that Ganache is running. After that, in the project directory, you can run the following commands:
+
+- ```truffle migrate --reset ``` to deploy the smart contracts into the Ganache Network.
+
+- ```npm install ``` to install the dependencies.
+
+And finally:
+
+- ```npm start ```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Metamask
 
-### `npm test`
+To interact with the application Metamask is needed.
+More info at https://metamask.io.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You need also to configure the Ganache network inside Metamask. [Example.](https://metamask.zendesk.com/hc/en-us/articles/360043227612-How-to-add-a-custom-network-RPC)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Ganache Network 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[Ganache](https://trufflesuite.com/ganache/) is a personal blockchain for rapid Ethereum and Corda distributed application development. 
+Use Ganache across the entire development cycle; enabling you to develop, deploy, and test your dApps in a safe 
+and deterministic environment.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Truffle
 
-### `npm run eject`
+To deploy the smart contract into the Ganache Chain we need [Truffle](https://trufflesuite.com/).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+After installing and configuring Truffle deploy the smart contracts with:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- ```truffle migrate --reset ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+If you want to interact with the smart contract without the Faucet UI you can use:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- ```truffle console ```
